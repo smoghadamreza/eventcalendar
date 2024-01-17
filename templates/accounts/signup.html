@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa-ir">
 	{% load static %}
     <head>
-        <title>Sign Up | Event Calendar</title>
+        <title>ثبت نام | تقویم دانشجویی</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -20,68 +20,68 @@
                         <div class="wrap d-md-flex">
                             <div class="text-wrap p-4 p-lg-5 d-flex img" style="background-image: url({% static 'images/bg.jpg' %});">
                                 <div class="text w-100">
-                                    <h2 class="mb-4">Welcome to Event Calendar</h2>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <h2 class="mb-4" style="font-family:vazir; text-align: right">به تقویم دانشجویی خوش آمدید</h2>
+                                    <p style="font-family:vazir; text-align: justify">خستگی را کنار بگذارید، اما هرگز امید را رها نکنید. از فکر کردن به شکست هایتان دست بکشید، اما هرگز از اهداف تان دست نکشید. فکر کردن به گذشته را رها کنید، اما هرگز آینده را به حال خود رها نکنید.</p>
                                 </div>
                             </div>
                             <div class="login-wrap p-4 p-md-5">
                                 <div class="row justify-content-center py-md-5">
                                     <div class="col-lg-9">
                                         <div class="social-wrap">
-                                            <h3 class="mb-3 text-center">Signup with this services</h3>
+                                            <h3 class="mb-3 text-center" style="font-family: vazir">ثبت نام با سرویس های زیر</h3>
                                             <p class="social-media d-flex justify-content-center">
                                                 <a href="#" class="social-icon google d-flex align-items-center justify-content-center"><span class="fa fa-google"></span></a>
                                                 <a href="#" class="social-icon facebook d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
                                                 <a href="#" class="social-icon twitter d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
                                             </p>
                                             <p class="or">
-                                                <span>or</span>
+                                                <span style="font-family: vazir">یا</span>
                                             </p>
                                         </div>
                                         <form action="#" method="post" class="signup-form">
                                             {% csrf_token %}
                                             <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-md-12" style="text-align: right">
                                                     <div class="form-group">
-                                                        <label class="label" for="email">Email Address</label>
+                                                        <label class="label" for="email" style="font-family: vazir">آدرس ایمیل</label>
                                                         {{ form.email }}
                                                         <span class="text-danger">{{ form.errors.email }}</span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-12" style="text-align: right">
                                                     <div class="form-group">
-                                                        <label class="label" for="password">Password</label>
+                                                        <label class="label" for="password" style="font-family: vazir">پسورد</label>
                                                         {{ form.password1 }}
                                                         <span class="text-danger">{{ form.errors.password1 }}</span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-12" style="text-align: right">
                                                     <div class="form-group">
-                                                        <label class="label" for="password">Password</label>
+                                                        <label class="label" for="password" style="font-family: vazir">تایید پسورد</label>
                                                         {{ form.password2 }}
                                                         <span class="text-danger">{{ form.errors.password2 }}</span>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12 my-4">
+                                                <div class="col-md-12 my-4" style="text-align: right">
                                                     <div class="form-group">
                                                         <div class="w-100">
-                                                            <label class="checkbox-wrap checkbox-primary">
-                                                                I agree all statements in terms of service
-                                                                <input type="checkbox" checked />
+                                                            <label class="checkbox-wrap checkbox-primary" style="font-family: vazir">
+                                                                با قوانین سایت موافقت دارم
+                                                                <input style="text-align: right" type="checkbox" checked />
                                                                 <span class="checkmark"></span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <button type="submit" class="btn btn-primary">Create an account</button>
+                                                    <div class="form-group" style="text-align: center">
+                                                        <button style="font-family: vazir" type="submit" class="btn btn-primary">ساخت اکانت</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </form>
-                                        <div class="w-100">
-                                            <p class="mt-4">I'm already a member! <a href="{% url 'accounts:signin' %}">Sign In</a></p>
+                                        <div class="w-100" style="text-align: center">
+                                            <p class="mt-4" style="font-family: vazir">عضو سایت هستم <a href="{% url 'accounts:signin' %}">وارد شدن</a></p>
                                         </div>
                                     </div>
                                 </div>

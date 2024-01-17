@@ -1,16 +1,16 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
-{% block title %}Event Dashboard{% endblock title %}
+{% block title %}تقویم رویداد{% endblock title %}
 
 {% block breadcrumb %}
     <div>
-        <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
-        <p>Event Dashboard</p>
+        <h1 style="font-family: vazir"><i class="fa fa-dashboard" ></i> داشبورد</h1>
+        <p style="font-family: vazir">داشبورد رویداد</p>
     </div>
     <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item" style="font-family: vazir"><a href="#">رویداد</a></li>
     </ul>
 {% endblock breadcrumb %}
 
@@ -20,7 +20,7 @@
         <div class="widget-small primary coloured-icon">
             <i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
-                <h4>Total Completed Events</h4>
+                <h4 style="font-family: vazir">همه‌ی رویداد های تکمیل شده.</h4>
                 <p><b>{{ total_event }}</b></p>
             </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="widget-small info coloured-icon">
             <i class="icon fa fa-thumbs-o-up fa-3x"></i>
             <div class="info">
-                <h4>Total Running Events</h4>
+                <h4 style="font-family: vazir">همه‌ی رویداد‌های در حال اجرا</h4>
                 <p><b>{{ running_events.count }}</b></p>
             </div>
         </div>
@@ -38,7 +38,7 @@
         <div class="widget-small warning coloured-icon">
             <i class="icon fa fa-users fa-3x"></i>
             <div class="info">
-                <h4>Total Participants</h4>
+                <h4 style="font-family: vazir">مجموع شرکت کنندگان</h4>
                 <p><b>10</b></p>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="widget-small danger coloured-icon">
             <i class="icon fa fa-star fa-3x"></i>
             <div class="info">
-                <h4>Stars</h4>
+                <h4 style="font-family: vazir">ستاره ها</h4>
                 <p><b>500</b></p>
             </div>
         </div>

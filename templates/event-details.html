@@ -7,8 +7,8 @@ Event Details
 {% block content %}
     <div class="container">
         <div class="clearfix">
-            <a class="btn btn-primary left" href="{% url 'calendarapp:calendar' %}"> Calendar </a>
-            <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_edit' event.pk %}"> Edit Event </a>
+            <a class="btn btn-primary left" href="{% url 'calendarapp:calendar' %}" style="font-family: vazir"> تقویم </a>
+            <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_edit' event.pk %}" style="font-family: vazir" > ویرایش رویداد </a>
         </div>
 
         <div class="clearfix">
@@ -19,8 +19,8 @@ Event Details
         </div>
         <hr>
         <div class="clearfix">
-            <h4 class="left" > Members of this Event</h4>
-            <a class="btn btn-success right" href="{% url 'calendarapp:add_eventmember' event.id %}"> Add Member </a>
+            <h4 style="font-family: vazir" class="left" > عضو های این رویداد</h4>
+            <a style="font-family: vazir" class="btn btn-success right" href="{% url 'calendarapp:add_eventmember' event.id %}"> اضافه کردن عضو </a>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -40,7 +40,7 @@ Event Details
                     <td>{{ member.user.username }}</td>
                     <td>{{ member.user.email }}</td>
                     <td>
-                        <a class="btn btn-danger" href="{% url 'calendarapp:remove_event' member.id %}">Remove</a>
+                        <a style="font-family: vazir" class="btn btn-danger" href="{% url 'calendarapp:remove_event' member.id %}">حذف</a>
                     </td>
                 </tr>
                 {% endfor %}
