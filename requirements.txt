@@ -2,4 +2,6 @@ asgiref==3.7.2
 Django==5.0.1
 sqlparse==0.4.4
 django_recaptcha
-whitenoise==6.6.0
+django-auto-logout
+gunicorn
+pytz

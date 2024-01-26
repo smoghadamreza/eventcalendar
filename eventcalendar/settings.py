@@ -25,7 +25,7 @@ SECRET_KEY = "asfasf*232(fjsiv%1pn3sb3o=s)!p*nzwh1$gp5-l&%nb!d=y_s"
 DEBUG = True
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ['karajihashop.ir', 'www.karajihashop.ir']
 
 # Application definition
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django_auto_logout.middleware.auto_logout',
 ]
 
 ROOT_URLCONF = "eventcalendar.urls"
@@ -64,6 +65,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'django_auto_logout.context_processors.auto_logout_client',
             ]
         },
     }
@@ -112,11 +114,14 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # 'data' is my media folder
 MEDIA_URL = '/media/'
 
-RECAPTCHA_PUBLIC_KEY = '6LcAfVApAAAAAEaR2ak6r87t7h1p3-ULil-U-N5i'
-RECAPTCHA_PRIVATE_KEY = '6LcAfVApAAAAAPjtPCxt2lVBeu5mjVYpYGZosHJn'
-AUTO_LOGOUT = {'IDLE_TIME': timedelta(seconds=10)}
+RECAPTCHA_PUBLIC_KEY = '6Ld3tVUpAAAAAKlnjxPjQ-CEzgzwTWlzGWCKS7wC'
+RECAPTCHA_PRIVATE_KEY = '6Ld3tVUpAAAAAIAnZ1pzWhCyiyh7S0szll01ny2W'
+AUTO_LOGOUT = {
+    'IDLE_TIME': timedelta(minutes=1),
+    'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
+}

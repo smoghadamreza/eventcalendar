@@ -20,8 +20,9 @@ class SignInView(View):
         forms = self.form_class(request.POST)
         if forms.is_valid():
             email = forms.cleaned_data["email"]
+            recaptcha = forms.cleaned_data["recaptcha"]
             password = forms.cleaned_data["password"]
-            user = authenticate(email=email, password=password)
+            user = authenticate(email=email, password=password, recaptcha=recaptcha)
             if user:
                 login(request, user)
                 return redirect("calendarapp:calendar")

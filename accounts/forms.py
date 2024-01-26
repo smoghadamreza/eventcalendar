@@ -1,5 +1,4 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from django.contrib.auth.password_validation import validate_password
 from django_recaptcha.fields import ReCaptchaField
@@ -7,7 +6,7 @@ from django_recaptcha.fields import ReCaptchaField
 from accounts.models import User
 
 
-class SignInForm(forms.Form, UserCreationForm):
+class SignInForm(forms.Form):
     recaptcha = ReCaptchaField()
     email = forms.EmailField(widget=forms.EmailInput(attrs={"class": "form-control"}))
     password = forms.CharField(
@@ -47,5 +46,3 @@ class SignUpForm(forms.ModelForm):
         return user
 
 
-class ExtendedUserCreationForm(UserCreationForm):
-    recaptcha = ReCaptchaField()
