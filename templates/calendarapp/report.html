@@ -9,7 +9,6 @@
 {% block breadcrumb %}
   <div>
       <h1 style="font-family: vazir"><i class="fa fa-calendar"></i>تقویم</h1>
-      <p style="font-family: vazir">تقویم رویداد‌ها</p>
   </div>
   <ul class="app-breadcrumb breadcrumb">
       <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -23,42 +22,34 @@
         <div class="tile row">
             <div class="col-md-3">
                 <div id="external-events">
-                    <h4 class="mb-4" style="font-family: vazir">رویدادهای در حال اجرا</h4>
-                    {% for event in events_month %}
+                    <h4 class="mb-4" style="font-family: vazir">گزارش های نوشته شده</h4>
+                    {% for report in reports %}
                       <div class="fc-event">
-                          <h3>{{ event.title }}</h3>
-                          <p>{{ event.description }}</p>
-                          <p>{{event.id}}</p>
-                          <p>From: {{ event.start_time }}</p>
-                          <p>To: {{ event.end_time }}</p>
+                          <h3>{{ report.title }}</h3>
+                          <p>{{ report.description }}</p>
+                          <p>{{report.id}}</p>
+                          <p>From: {{ report.start_time }}</p>
+                          <p>To: {{ report.end_time }}</p>
                       </div>
                     {% empty %}
-                      <p style="font-family: vazir">هیچ رویداد در حال اجرایی یافت نشد.</p>
+                      <p style="font-family: vazir">هیچ گزارش نوشته شده‌ای یافت نشد.</p>
                     {% endfor %}
                 </div>
             </div>
             <div class="col-md-9">
                 <div id="calendar"></div>
             </div>
-            <div class="modal fade show" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-primary">
-                            <h5 class="modal-title text-white" id="exampleModalLongTitle" style="font-family: vazir">اضافه کردن رویداد</h5>
-                            <button id="modalClose1" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
+
 <form method="post" dir="rtl">
     {% csrf_token %}
     <div class="modal-body">
         <div class="form-row">
             <div class="col">
-                <label for="recipient-name" class="col-form-label" style="font-family: vazir">عنوان رویداد:</label>
+                <label for="recipient-name" class="col-form-label" style="font-family: vazir">عنوان :</label>
                 {{ form.title }}
             </div>
             <div class="col">
-                <label for="message-text" class="col-form-label" style="font-family: vazir">توضیحات:</label>
+                <label for="message-text" class="col-form-label" style="font-family: vazir">گزارش:</label>
                 {{ form.description }}
             </div>
         </div>

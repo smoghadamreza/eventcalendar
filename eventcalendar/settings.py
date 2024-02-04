@@ -122,6 +122,6 @@ MEDIA_URL = '/media/'
 RECAPTCHA_PUBLIC_KEY = '6Ld3tVUpAAAAAKlnjxPjQ-CEzgzwTWlzGWCKS7wC'
 RECAPTCHA_PRIVATE_KEY = '6Ld3tVUpAAAAAIAnZ1pzWhCyiyh7S0szll01ny2W'
 AUTO_LOGOUT = {
-    'IDLE_TIME': timedelta(minutes=1),
+    'IDLE_TIME': timedelta(minutes=10),
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }

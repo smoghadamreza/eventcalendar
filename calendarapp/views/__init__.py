@@ -10,8 +10,8 @@ from .other_views import (
     delete_event,
     next_week,
     next_day,
+    ReportView
 )
-
 
 __all__ = [
     AllEventsListView,
@@ -26,4 +26,5 @@ __all__ = [
     delete_event,
     next_week,
     next_day,
+    ReportView
 ]

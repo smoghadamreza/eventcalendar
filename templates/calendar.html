@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class="clearfix">
-    <span class="left m-2" style="font-size: 20px;">Wellcome, {{ request.user }}</span>
-    <a class="btn btn-info right" href="{% url 'accounts:signout' %}"> Sign Out</a>
-	<a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ next_month }} "> Next Month >> </a>
-    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ prev_month }}"> << Previous Month </a>
-    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_new' %}"> + New Event </a>
+    <span class="left m-2" style="font-size: 20px;">خوش آمدید, {{ request.user }}</span>
+    <a class="btn btn-info right" href="{% url 'accounts:signout' %}"> خارج شدن</a>
+	<a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ next_month }} "> ماه بعد >> </a>
+    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:calendar' %}?{{ prev_month }}"> << ماه قبل </a>
+    <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_new' %}"> + رویداد جدید </a>
 </div>
 <div style="color: blueviolet;">
     {{ calendar }}
